@@ -399,6 +399,15 @@ footer{
     background-color: var(--gama-color-six);
     color: var(--font-color-secondary);
 }
+footer a{
+    color: var(--font-color-secondary);
+}
+footer a:visited{
+    color: var(--font-color-secondary);
+}
+.fa-brands{
+    
+}
 /* Estilos para los contenedores dentro del footer */
 footer>div{
     display: flex;
