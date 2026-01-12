@@ -401,6 +401,7 @@ footer{
 }
 footer a{
     color: var(--font-color-secondary);
+    text-decoration: none;
 }
 footer a:visited{
     color: var(--font-color-secondary);
@@ -441,10 +442,14 @@ footer > div:nth-child(2) figure{
 footer > div:last-child>div ul, footer > div:last-child>div:last-child>div{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
     align-items: center;
+}
+footer > div:last-child>div ul li a{
+    display: flex;
+    flex-direction: row;
 }
 .fa-brands{
     font-size: 1.5rem;
