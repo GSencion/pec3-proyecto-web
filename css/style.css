@@ -225,6 +225,7 @@ section ul{
     scroll-snap-type: x mandatory;
     overflow: auto;
     height: 15vh;
+    margin: 1rem 0rem;
 }
 
 #reseñas > div > article{
