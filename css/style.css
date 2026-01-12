@@ -379,6 +379,9 @@ section ul{
     grid-template-columns: repeat(1,1fr);
     gap: 1rem;
 }
+#formulario label{
+    padding: 1rem;
+}
 #formulario input{
     width: 60vw;
     height: 5vh;
@@ -388,6 +391,25 @@ section ul{
     height: 20vh;
     width: 80%;
     margin: auto;
+}
+
+#formulario button{
+    width: 30%;
+    height: 4vh;
+    margin: auto;
+    background-color: var(--gama-color-six);
+    color: var(--font-color-secondary);
+    border-top-left-radius: 10px;
+}
+
+#formulario button:hover{
+    width: 30%;
+    height: 4vh;
+    margin: auto;
+    background-color: var(--gama-color-one);
+    color: var(--font-color-primary);
+    border: 1px solid;
+
 }
 /* --------------------------------------------------------- Footer --------------------------------------------------------- */
 /* Estilos generales del footer */
