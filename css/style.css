@@ -440,9 +440,9 @@ footer > div:nth-child(2) figure{
 }
 /* Estilos para el ulitmo contenedor del footer así como los iconos de las redes sociales */
 footer > div:last-child>div ul, footer > div:last-child>div:last-child>div{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
     justify-content: space-between;
     gap: 1rem;
     align-items: center;
