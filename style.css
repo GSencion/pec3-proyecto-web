@@ -1,0 +1,652 @@
+@charset "utf-8";
+
+/* Reinicio de margenes */
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Variables */
+:root{
+    --gama-color-one:#EDFFD4;
+    --gama-color-two: #DAFFAA;
+    --gama-color-three: #C8FF80;
+    --gama-color-four:#579900;
+    --gama-color-five:#476F12;
+    --gama-color-six:#304417;
+    --font-color-primary:#000000;
+    --font-color-secondary:#FFFFFF;
+    --font-family-heading:'Rubik', sans-serif;
+    --font-family-texts:'Arvo', serif;
+    --font-size-primary:18px;
+}
+
+/* Estilos globals del html */
+html{
+    font-size: var(--font-size-primary);
+}
+
+/* Estilos generales del body */
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    max-width: 2560px;
+    margin: 0 auto;
+    font-size: var(--font-size-primary);
+    font-family: var(--font-family-texts);
+}
+
+/* --------------------------------------------------------- Header --------------------------------------------------------- */
+/* Estilos del header de todos los documentos*/
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex:0 0 15vh;
+}
+/* Estilos para el logo dentro del menú de navegación */
+header figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+}
+header figure img{
+    width: 150px;
+}
+/* Estilos del menú de navegación */
+header nav{
+    background-color: var(--gama-color-six);
+    color:var(--font-color-primary);
+    /* height: 3vh; */
+    font-size: 1.1rem;
+}
+/* Estilos para la lista del menú de navegación */
+header nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    list-style-type: none;
+    margin: 1rem;
+    gap: 1rem;
+}
+/* Estilos para los enlaces del menú de navegación */
+header nav ul li a{
+    color:var(--font-color-secondary);
+    text-decoration: none;
+}
+/* Clase para indicar la página actual a través del menú de navegación */
+.activo{
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+/* Clase que oculta el menú de navegación por defecto en movil */
+.menu{
+    display: none;
+}
+.mostrar{
+    display: flex;
+}
+/* Clase para añadir los estilos necesarios para el menú hamburguesa*/
+.nav-bar{
+    background-color: var(--gama-color-six);
+    color: var(--font-color-secondary);
+    padding: 0.5rem;
+}
+/* Estilo para resaltar el texto del menú de navegación */
+header nav ul li a:hover{
+    text-decoration: underline overline;
+    text-underline-offset: 6px;
+}
+/* --------------------------------------------------------- Secciones del documento --------------------------------------------------------- */
+/* Estilos generales de todas las págnas */
+h1,h2,h3{
+    font-family: var(--font-family-heading);
+    margin: 0.5rem 0rem;
+}
+p{
+    margin: auto 0.5rem;
+}
+/* section{
+    margin: 1rem 0em;
+} */
+section p{
+    margin: 1rem 0rem;
+}
+/* section figure{
+    width: auto;
+} */
+section figure img{
+    width: 100%;
+}
+section h1, section h2, section h3, section p{
+    margin: 0.5rem;
+}
+section ul{
+    list-style: none;
+}
+/* --------------------------------------------- Página principal --------------------------------------------- */
+/* Estilos generales de la sección del banner*/
+#banner div{
+    height: 50vh;
+}
+#banner figure{
+    width: 100%;
+    height: 100%;
+}
+#banner figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#banner h1{
+    text-align: center;
+    background-color: var(--gama-color-two);
+    margin: 0rem auto;
+}
+/* Estilos para la sección de "diferentes niveles" */
+#niveles>div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+/* #niveles h2{
+    margin: 2rem auto;
+} */
+#niveles>div div{
+    padding: 1rem;
+    margin: 0.3rem 0rem;
+    border-radius: 2.5px;
+}
+
+#niveles>div div:nth-child(1){
+    border: 10px solid var(--gama-color-three);
+}
+
+#niveles>div div:nth-child(2){
+    border: 10px solid var(--gama-color-four);
+}
+
+#niveles>div div:nth-child(3){
+    border: 10px solid var(--gama-color-five);
+    /* color: var(--font-color-secondary); */
+}
+/* Estilos generales para la sección de "entorno" */
+#entorno > div{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+#entorno > div figure{
+    width: 100%;
+}
+/* Estilos generales para la sección de la galeria scroll-snap de"#CorriendoPorLoSano"  */
+/* Estilos generales para la subsección de "proximo eventos" */
+#evento h2{
+    background-color: var(--gama-color-two);
+    text-align: center;
+    margin: auto 0rem;
+}
+#evento figure{
+    width: 100%;
+}
+/* Estilos generales para la subsección de "Fotos de la comunidad" */
+#CPS > div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+#fotosComunidad > div{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    scroll-snap-type: x mandatory;
+    overflow: auto;
+    margin: auto;
+}
+#fotosComunidad > div > figure{
+    scroll-snap-align: start;
+}
+#fotosComunidad > div > figure > img{
+    width: 100vw;
+}
+#CPS h2, #CPS h3{
+    text-align: center;
+}
+/* Estilos generales para la sección de "últimas reseñas" */
+#reseñas > div{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    scroll-snap-type: x mandatory;
+    overflow: auto;
+    height: 15vh;
+}
+
+#reseñas > div > article{
+    padding: 0.5rem;
+    background-color: var(--gama-color-two);
+    border: 1px solid;
+    scroll-snap-align: start;
+} 
+
+#reseñas > div > article > ul{
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* --------------------------------------------- Página de actividades --------------------------------------------- */
+/* Sección de entrenamientos */
+#entrenamientos > div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 1rem auto;
+}
+#entrenamientos > div > div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 1rem;
+    margin: auto 1rem;
+}   
+#entrenamientos > div > div figure figcaption{
+    text-align: center;
+    height: 3vh;
+}
+#entrenamientos > div > div figure figcaption a{
+    text-decoration: none;
+    color: var(--font-color-primary);
+}
+#entrenamientos > div:nth-child(2) > div figure figcaption{
+    background-color:  var(--gama-color-three);
+}
+#entrenamientos > div:nth-child(3) > div figure figcaption{
+    background-color: var(--gama-color-four);
+}
+#entrenamientos > div:nth-child(4) > div figure figcaption{
+    background-color: var(--gama-color-five);
+}
+#entrenamientos > div:nth-child(4) > div figure figcaption a{
+    color: var(--font-color-secondary);
+}
+/* Sección de calendario */
+#calendario > div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+#calendario > div > div:first-child{
+    width: 100%;
+    height: 34vh;
+    display: flex;
+    /* flex: 100vw; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    max-width: 768px;
+}
+#calendario > div > div:first-child article{
+    height: 60vh;
+    /* margin: auto; */
+    border: 5px solid var(--gama-color-five);
+    scroll-snap-align: start;
+}
+#calendario > div > div:first-child ul li{
+    padding: 0.5rem;
+}
+#calendario > div > div:last-child ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    justify-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+#calendario > div > div:last-child ul li button{
+    width: 20vw;
+    height: 5vh;
+    background-color: var(--gama-color-six);
+    color: var(--font-color-secondary);
+}
+#calendario > div > div:last-child ul li button:hover{
+    background-color: var(--gama-color-two);
+    color: var(--font-color-primary);
+}
+/* --------------------------------------------- Página de comunidad --------------------------------------------- */
+/* Sección de blog */
+#comunidad a{
+    text-decoration: none;
+    color: var(--font-color-primary);
+}
+
+#comunidad > div{
+    padding: 2rem 0rem;
+}
+#comunidad > div:nth-child(4) > div{
+    display: flex;
+    flex-direction: column;
+}
+#comunidad > div:nth-child(4) > div > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#comunidad > div:nth-child(4) > div > div:nth-child(2){
+    flex-direction: row-reverse;
+}
+#comunidad > div:nth-child(4) > div > div > figure > img{
+    width: 25vh;
+}
+/* Sección de galeria #CorriendoPorLoSano */
+#comunidad > div:last-child > div{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    gap: 1rem;
+}
+/* --------------------------------------------- Página sobre el club --------------------------------------------- */
+/* Sección de nuestro equipo */
+#sobre-el-club > article > div{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    overflow: auto;
+    margin: auto;
+}
+#sobre-el-club > article > div > figure{
+    scroll-snap-align: start;
+}
+#sobre-el-club > article > div > figure > img{
+    width: 100vw;
+}
+/* Sección de formulario de empresas */
+#formulario form fieldset ul{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0rem;
+}
+#formulario form fieldset ul li{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+}
+#formulario input{
+    width: 60vw;
+    height: 5vh;
+    margin: auto;
+}
+#formulario textarea{
+    height: 20vh;
+    width: 80%;
+    margin: auto;
+}
+/* --------------------------------------------------------- Footer --------------------------------------------------------- */
+/* Estilos generales del footer */
+footer{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+    list-style-type: none;
+    background-color: var(--gama-color-six);
+    color: var(--font-color-secondary);
+}
+footer a{
+    color: var(--font-color-secondary);
+}
+/* Estilos para los contenedores dentro del footer */
+footer>div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem 0.5rem;
+    align-items: center;
+    border-bottom: 1px solid;
+    width: 100%;
+    gap: 1rem;
+}
+footer >div:last-child{
+    border-bottom: none;
+}
+/* Estilos para el menú redundante del primer contenedor */
+footer > div:first-child ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+footer > div:first-child ul li a{
+    color: var(--font-color-secondary);
+}
+/* Estilos para el segundo contenedor del footer */
+footer > div:nth-child(2) figure{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 4rem;
+}
+/* Estilos para el ulitmo contenedor del footer así como los iconos de las redes sociales */
+footer > div:last-child>div ul, footer > div:last-child>div:last-child>div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
+.fa-brands{
+    font-size: 1.5rem;
+}
+/* Estilos generales para las listas del footer */
+footer div ul li{
+    list-style: none;
+    padding: 1rem;
+}
+/* --------------------------------------------------------- Mendia queries --------------------------------------------------------- */
+/* Tablet */
+@media only screen and (min-width: 768px){
+    #comunidad > div:last-child > div{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    } 
+    #formulario textarea{
+        width: 60%;
+    }
+}
+/* Escritorio */
+@media only screen and (min-width: 1024px){
+    /* --------------------------------------------------------- Header --------------------------------------------------------- */
+    /* Estilos del header de todos los documentos*/
+    header{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex:0 0 15vh;
+    }
+    /* Estilos para el logo dentro del menú de navegación */
+    header figure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5rem;
+    }
+    header figure img{
+        width: 150px;
+    }
+    /* Estilos del menú de navegación */
+    header nav{
+        background-color: var(--gama-color-six);
+        color:var(--font-color-primary);
+        /* height: 3vh; */
+        font-size: 1.1rem;
+    }
+    /* Estilos para la lista del menú de navegación */
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+        margin: 1vh;
+    }
+    .nav-bar{
+        display: none;
+    }
+    /* Estilos para los enlaces del menú de navegación */
+    header nav ul li a{
+        color:var(--font-color-secondary);
+        text-decoration: none;
+    }
+    /* Clase para indicar la página actual a través del menú de navegación */
+    .activo{
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+    /* Estilo para resaltar el texto del menú de navegación */
+    header nav ul li a:hover{
+        text-decoration: underline overline;
+        text-underline-offset: 6px;
+    }
+    /* --------------------------------------------------------- Secciones del documento --------------------------------------------------------- */
+    /* --------------------------------------------- Página principal --------------------------------------------- */
+    /* Estilos generales */
+    section{
+        margin: 1rem 0rem;
+    }
+    /* Sección del banner */
+    #banner{
+        margin-top: 0rem;
+    }
+    #banner div{
+        height: 70vh;
+    }
+    /* Sección de diferentes niveles */
+    #niveles>div{
+            grid-template-columns:repeat(3,1fr) ;
+            gap: 2rem;
+            padding: 1rem;
+    }
+    /* Sección de entorno */
+    #entorno > div{
+    padding: 1rem;
+    }
+    #entorno > div > div{
+        display: flex;
+        flex-direction: row;
+    }
+    #entorno > div > div:nth-child(2){
+        flex-direction: row-reverse;
+    }
+    #entorno > div figure{
+        max-width: 25%;
+    }    
+    /* Sección de #CorriendoPorLoSano */
+    #CPS > div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        padding: 2rem;
+    }
+    #fotosComunidad > div{
+        width: 50vw;
+        height: 60vh;
+    } 
+    #fotosComunidad > div figure img{
+        width: 50vw;
+    }
+    /* Sección de reseñas */
+    #reseñas > div{
+        scroll-snap-type: none;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: auto;
+        height: auto;
+        gap: 1rem;
+        padding: 2rem 5rem;
+    }
+    #reseñas > div > article{
+        padding: 1.5rem;
+    }
+    #reseñas > div > article > ul {
+        width: auto;
+    }
+    /* --------------------------------------------- Página actividades --------------------------------------------- */
+    /* Sección de calendario */
+    #calendario > div{
+        grid-template-columns: repeat(2,1fr);
+        padding: 1rem;
+    }
+    #calendario > div > div:first-child{
+        max-width: 100%;
+    }
+    #calendario > div > div:last-child ul li button{
+        width: 10vw;
+    }
+    /* --------------------------------------------- Página comunidad --------------------------------------------- */
+    /* Sección del blog */
+    #comunidad{
+        padding: 2rem;
+    }
+    #comunidad > div:last-child > div{
+        gap: 2rem;
+    }
+    /* Sección de galerias #CorriendoPorLoSano */
+    #comunidad > div:nth-child(4) > div > div > figure > img{
+        width: 45vh;
+    }
+    #comunidad > div:nth-child(4) > div > div:nth-child(2){
+        flex-direction: row;
+    }
+    /* --------------------------------------------- Página sobre el club --------------------------------------------- */
+    /* Sección de nuestro equipo */
+    #sobre-el-club, #formulario{
+        padding: 2rem;
+    }
+    #sobre-el-club > figure{
+        max-width: 1024px;
+        margin: auto;
+    }
+    #sobre-el-club > article > div{
+        width: 50vw;
+    }
+    #sobre-el-club > article > div > figure{
+        scroll-snap-align: start;
+    }
+    #sobre-el-club > article > div > figure > img{
+        width: 50vw;
+    }
+    #formulario form, #formulario form input{
+        max-width: 50%;
+        margin: auto;
+    }
+    /* --------------------------------------------------------- Footer --------------------------------------------------------- */
+    /* Estilos del footer en escritorio */
+    footer{
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+    }
+    footer > div{
+        border-bottom: none;
+        border-right: 1px solid;
+        height: 100%;
+    }
+    footer > div:last-child{
+        border-right: none;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    /* --------------------------------------------- Página actividades --------------------------------------------- */
+    /* Sección de calendario */
+    #calendario > div > div:first-child{
+        height: 31vh;
+    }
+}
