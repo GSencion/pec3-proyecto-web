@@ -402,6 +402,9 @@ footer{
 footer a{
     color: var(--font-color-secondary);
 }
+footer a:visited{
+    color: var(--font-color-secondary);
+}
 /* Estilos para los contenedores dentro del footer */
 footer>div{
     display: flex;
