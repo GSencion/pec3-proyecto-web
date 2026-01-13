@@ -283,7 +283,7 @@ section ul{
 }
 #calendario > div > div:first-child{
     width: 100%;
-    height: 34vh;
+    height: 33vh;
     display: flex;
     /* flex: 100vw; */
     flex-direction: column;
@@ -335,14 +335,11 @@ section ul{
 }
 #comunidad > div:nth-child(4) > div > div{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
 }
-#comunidad > div:nth-child(4) > div > div:nth-child(2){
-    flex-direction: row-reverse;
-}
 #comunidad > div:nth-child(4) > div > div > figure > img{
-    width: 25vh;
+    width: 100%;
 }
 /* Sección de galeria #CorriendoPorLoSano */
 #comunidad > div:last-child > div{
@@ -551,22 +548,29 @@ footer div ul li{
     section{
         margin: 1rem 0rem;
     }
+    section{
+        max-width: 80%;
+        margin: 2rem auto;
+    }
     /* Sección del banner */
     #banner{
-        margin-top: 0rem;
+        margin: 0rem 0rem 2rem 0rem;
+        max-width: 100%;
     }
     #banner div{
         height: 70vh;
     }
     /* Sección de diferentes niveles */
     #niveles>div{
-            grid-template-columns:repeat(3,1fr) ;
-            gap: 2rem;
-            padding: 1rem;
+        grid-template-columns:repeat(3,1fr) ;
+        gap: 2rem;
+        padding: 1rem;
     }
     /* Sección de entorno */
     #entorno > div{
-    padding: 1rem;
+        padding: 1rem;
+        width: 80%;
+        margin: auto;
     }
     #entorno > div > div{
         display: flex;
@@ -586,11 +590,11 @@ footer div ul li{
         padding: 2rem;
     }
     #fotosComunidad > div{
-        width: 50vw;
-        height: 60vh;
+        width: 40vw;
+        height: 48vh;
     } 
     #fotosComunidad > div figure img{
-        width: 50vw;
+        width: 40vw;
     }
     /* Sección de reseñas */
     #reseñas > div{
@@ -609,6 +613,14 @@ footer div ul li{
         width: auto;
     }
     /* --------------------------------------------- Página actividades --------------------------------------------- */
+    /* Sección de entrenamiento */
+    #entrenamientos > div > div > figure{
+        width: 80%;
+    } 
+    #entrenamientos > div > div{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+    }
     /* Sección de calendario */
     #calendario > div{
         grid-template-columns: repeat(2,1fr);
@@ -622,9 +634,9 @@ footer div ul li{
     }
     /* --------------------------------------------- Página comunidad --------------------------------------------- */
     /* Sección del blog */
-    #comunidad{
+    /* #comunidad{
         padding: 2rem;
-    }
+    } */
     #comunidad > div:last-child > div{
         gap: 2rem;
     }
@@ -632,15 +644,17 @@ footer div ul li{
     #comunidad > div:nth-child(4) > div > div > figure > img{
         width: 45vh;
     }
-    #comunidad > div:nth-child(4) > div > div:nth-child(2){
+    #comunidad > div:nth-child(4) > div > div{
         flex-direction: row;
+        align-items: center;
     }
     /* --------------------------------------------- Página sobre el club --------------------------------------------- */
     /* Sección de nuestro equipo */
-    #sobre-el-club, #formulario{
-        padding: 2rem;
+    #sobre-el-club > div{
+        display: flex;
+        flex-direction: row;
     }
-    #sobre-el-club > figure{
+    #sobre-el-club figure{
         max-width: 1024px;
         margin: auto;
     }
@@ -653,7 +667,14 @@ footer div ul li{
     #sobre-el-club > article > div > figure > img{
         width: 50vw;
     }
-    #formulario form, #formulario form input{
+    #formulario{
+        padding: 2rem;
+    }
+    #formulario form{
+        /* max-width: 50%; */
+        margin: auto;
+    }
+    #formulario form input{
         max-width: 50%;
         margin: auto;
     }
@@ -677,6 +698,6 @@ footer div ul li{
     /* --------------------------------------------- Página actividades --------------------------------------------- */
     /* Sección de calendario */
     #calendario > div > div:first-child{
-        height: 31vh;
+        height: 30vh;
     }
 }
