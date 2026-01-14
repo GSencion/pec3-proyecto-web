@@ -361,6 +361,13 @@ section ul{
 #sobre-el-club > article > div > figure{
     scroll-snap-align: start;
 }
+#sobre-el-club > article > div > figure > figcaption,#sobre-el-club > article p:last-child{
+    text-align: center;
+}
+#sobre-el-club > article > div > figure > figcaption a{
+    text-decoration: none;
+    color: var(--gama-color-six);
+}
 #sobre-el-club > article > div > figure > img{
     width: 100vw;
 }
@@ -661,13 +668,13 @@ footer div ul li{
         margin: auto;
     }
     #sobre-el-club > article > div{
-        width: 50vw;
+        width: 80vw;
     }
     #sobre-el-club > article > div > figure{
         scroll-snap-align: start;
     }
     #sobre-el-club > article > div > figure > img{
-        width: 50vw;
+        width: 40vw;
     }
     #formulario{
         padding: 2rem;
