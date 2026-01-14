@@ -264,16 +264,10 @@ section ul{
     text-decoration: none;
     color: var(--font-color-primary);
 }
-#entrenamientos > div:nth-child(2) > div figure figcaption{
-    background-color:  var(--gama-color-three);
+#entrenamientos > div:nth-child(2) > div figure figcaption,#entrenamientos > div:nth-child(3) > div figure figcaption, #entrenamientos > div:nth-child(4) > div figure figcaption{
+    background-color:  var(--gama-color-six);
 }
-#entrenamientos > div:nth-child(3) > div figure figcaption{
-    background-color: var(--gama-color-four);
-}
-#entrenamientos > div:nth-child(4) > div figure figcaption{
-    background-color: var(--gama-color-five);
-}
-#entrenamientos > div:nth-child(4) > div figure figcaption a{
+#entrenamientos > div:nth-child(2) > div figure figcaption a,#entrenamientos > div:nth-child(3) > div figure figcaption a, #entrenamientos > div:nth-child(4) > div figure figcaption a{
     color: var(--font-color-secondary);
 }
 /* Sección de calendario */
