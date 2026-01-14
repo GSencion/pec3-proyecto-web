@@ -611,6 +611,9 @@ footer div ul li{
     #reseñas > div > article > ul {
         width: auto;
     }
+    .scroll-snap-descripcion{
+        display: none;
+    }
     /* --------------------------------------------- Página actividades --------------------------------------------- */
     /* Sección de entrenamiento */
     #entrenamientos > div > div > figure{
